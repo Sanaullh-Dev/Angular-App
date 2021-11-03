@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card-body text-left">
+        <ng-container *ngFor="let product of productList">
+            Product Name:&nbsp;<strong class="text-success">{{product.name}}</strong> 
+            &nbsp;&nbsp;
+            Product Id:&nbsp;<strong class="text-success">{{product.id}}</strong>
+            &nbsp;&nbsp;
+            Email Id:&nbsp;<strong class="text-success">{{product.email}}</strong>
+            <br>
+        </ng-container>
+    </div>
+</div>
+
+<!-- <div class="page-area">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let pro of productList">
+            <app-card>
+                <h5 class="card-title">{{pro.name}}</h5>
+                <button class="btn btn-success" (click)="onclick()">Know more Laptop</button>
+            </app-card>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- <div class="page-area">
+    <br>
+    <h2 class="h2-center">Contact Us Pagar</h2>
+    <p> This is Contact Us Page we are showing on user Screen</p>
+    <div class="row">
+        <div class="col-md-6">
+            <app-card>
+                <h5 class="card-title">{{product}}</h5>
+                <button class="btn btn-success" (click)="onclick()">Know more Laptop</button>
+            </app-card>
+        </div>
+        <div class="col-md-6">
+            <app-card>
+                <h5 class="card-title">{{product}}</h5>
+                <button class="btn btn-success" (click)="onclick()">Know more Laptop</button>
+            </app-card>
+        </div>
+        <div class="col-md-6">
+            <app-card>
+                <h5 class="card-title">{{product}}</h5>
+                <button class="btn btn-success" (click)="onclick()">Know more Laptop</button>
+            </app-card>
+        </div>
+        <div class="col-md-6">
+            <app-card>
+                <h5 class="card-title">{{product}}</h5>
+                <button class="btn btn-success" (click)="onclick()">Know more Laptop</button>
+            </app-card>
+        </div>
+    </div>
+</div> -->

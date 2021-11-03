@@ -1,0 +1,35 @@
+<br>
+<div class="contaner">
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" name="" #username class="form-control" placeholder="User Name">
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success" (click)="onCreateUser(username)">Create User</button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-danger" (click)="onRemoveUser()">Remove User</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th>User Name</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users index as i">
+                    <td>{{user.name}}</td>
+                    <td>
+                       <button class="btn btn-danger" (click)="onRemoveUser1(i)">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>

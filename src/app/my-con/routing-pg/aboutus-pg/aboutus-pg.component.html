@@ -1,0 +1,75 @@
+<div class="page-area ">
+    <h2 class="text-center"> About Us</h2>
+    <h3>Customs Pipe</h3>
+    <h4 class="text-center"> {{value | mypipe: 12}}</h4>
+    <ul>
+        <li *ngFor="let name of nameArr">
+            {{name | mypipe:8}}
+        </li>
+    </ul>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h3> Filter Pipe for Search</h3>
+            <div class="form-group">
+                <input type="email" class="form-control" id="nameInput1"
+                 placeholder="Search Products by Name" [(ngModel)]="nameSerch">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Availability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of productArr | filter:nameSerch">
+                    <th scope="row">{{item.sno}}</th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.available}}</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+    
+    <div class="row justify-content-center mb-3">
+      <h3>Impure Pipe</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8 form-inline mb-3 justify-content-center">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Add Products"
+            #addedProduct>
+            <button class="btn btn-success ml-2" (click)="onAdd(addedProduct)">Add Product</button>
+        </div>
+      </div>
+      <div class="col-md-8">
+          <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Product Name</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Availability</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of productArr2 | filter:nameSerch">
+                  <th scope="row">{{item.sno}}</th>
+                  <td>{{item.name}}</td>
+                  <td>{{item.price}}</td>
+                  <td>{{item.available}}</td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+    
+</div>

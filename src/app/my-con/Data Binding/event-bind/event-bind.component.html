@@ -1,0 +1,16 @@
+<br>
+<button (click)="onAddCart()">Add to Cart</button>
+<p>{{message1}}</p>
+<br>
+<input type="text" value="myinputtxt" (click)="oninputclick($event)" (keydown)="oninputclick($event)"/>
+<p>{{message1}}</p>
+<br>
+<button (click)="onAddProduct($event)" value="Laptop">Laptop</button>
+<button (click)="onAddProduct($event)" value="TV">TV</button>
+<button (click)="onAddProduct($event)" value="Mobile">Mobile</button>
+<button (click)="onAddProduct($event)" value="Tap">Tap</button>
+<p>{{message2}}</p>
+<br>
+<input #inputinfo type="text" value="My input" name="SRS">
+<button (click)="getInputInfo(inputinfo)"> Get Info</button>
+<p>{{message3}}</p>

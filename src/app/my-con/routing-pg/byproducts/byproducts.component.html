@@ -1,0 +1,44 @@
+<div class="page-area">
+    <div class="text-center">
+        <h2>Buy Product</h2>
+
+        <div class="alert alert-light border d-flex align-items-center" *ngIf="addedPro">
+            <strong class="text-success">{{addedPro}}</strong> &nbsp; is selected and added in cart
+            <button class="btn btn-success ml-auto">Checkout</button>
+        </div>
+        <hr class="mb-3">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" >
+                    <img src="https://images.unsplash.com/photo-1566476927456-446189d7b1ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop</h5>
+                        <button class="btn btn-success" (click)="onSelect('Laptop')">add Card</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1498661705887-3778d9ecb4ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile</h5>
+                        <button class="btn btn-success" (click)="onSelect('Mobile')">add Card</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1551127017-4c6752f4a022?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tab</h5>
+                        <button class="btn btn-success" (click)="onSelect('Tab')">add Card</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1526352319234-c349ead2152a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Camara</h5>
+                        <button class="btn btn-success" (click)="onSelect('Camera')">add Card</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-bypro-child class="w-100" [productck]="product" [itemName]="itemNa" (addedPro)="onadded($event)"></app-bypro-child>
+    </div>
+</div>

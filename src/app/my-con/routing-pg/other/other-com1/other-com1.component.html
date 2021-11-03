@@ -1,0 +1,10 @@
+
+<div class="box" #main appTestdireactive >
+    <p>User Name: {{name}}</p>
+    <br>
+    <!-- <input type="text" placeholder="Name" #UName> &nbsp;&nbsp; -->
+    <button class="btn btn-success" (click)="onAlter()">Update</button> &nbsp;
+    <button class="btn btn-success" (click)="ChangeColor('red')">Red</button>&nbsp;
+    <button class="btn btn-success" (click)="ChangeColor('green')">Green</button>&nbsp;
+    <ng-content ></ng-content>
+</div>

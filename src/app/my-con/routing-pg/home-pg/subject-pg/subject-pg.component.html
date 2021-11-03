@@ -1,0 +1,7 @@
+<div class="box" [ngClass]="{boxRed:bkcolor=='red',boxGreen:bkcolor=='green',boxGray:bkcolor=='gray',boxblue:bkcolor=='blue'}" >
+    <p>User Name: {{name}}</p>
+    <br>
+    <p>User G Name: {{globalName}}</p>
+    <input type="text" placeholder="Name" #UName> &nbsp;&nbsp;
+    <button class="btn btn-success" (click)="onUpdate(UName)">Update</button>
+</div>

@@ -1,0 +1,30 @@
+<br>
+<h2 class="h2-center">Home Pagar</h2>
+<hr>
+<p class="text-center">User Name: <strong class="text-success">{{name}}</strong></p>
+<hr>
+<p class="text-center">User G Name: <strong class="text-success">{{globalName}}</strong></p>
+
+
+<div class="products">
+    <ng-container *ngIf="status">
+        <div *ngFor="let item of products">{{item.name}}</div>
+    </ng-container>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <app-subject-pg [bkcolor]="'red'"></app-subject-pg>
+    </div>
+    <div class="col-md-6">
+        <app-subject-pg [bkcolor]="'green'"></app-subject-pg>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-6">
+        <app-subject-pg [bkcolor]="'gray'"></app-subject-pg>
+    </div>
+    <div class="col-md-6">
+        <app-subject-pg [bkcolor]="'blue'"></app-subject-pg>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+<br><br>
+    <button class="btn btn-success" (click)="onclick()">Crate Block</button>
+<br><br>
+<div *ngIf="isVaild; then thenBlock else elseblock"></div>
+<ng-template #thenBlock>
+    Block has been crated and block name is my block
+</ng-template>
+<ng-template #elseblock>
+    <div>No block has been created</div>
+</ng-template>
+
+
+</div>
+

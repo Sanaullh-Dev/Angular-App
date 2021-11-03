@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input type="text"
+             placeholder="Datepicker"
+             class="form-control"
+             bsDatepicker>
+    </div>
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <input type="text"
+             placeholder="Daterangepicker"
+             class="form-control"
+             bsDaterangepicker>
+    </div>
+  </div>
+  <alert type="success">
+    <strong>Well done!</strong> You successfully read this important alert message.
+  </alert>
+  <alert type="info">
+    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+  </alert>
+  <alert type="warning">
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+  </alert>
+  <alert type="danger">
+    <strong>Oh snap!</strong> Change a few things up and try submitting again.
+  </alert>
+
+  <carousel>
+    <slide>
+      <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg" alt="first slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </slide>
+    <slide>
+      <img src="https://cdn.pixabay.com/photo/2014/05/02/21/49/home-office-336373_960_720.jpg" alt="second slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </slide>
+    <slide>
+      <img src="https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336377__340.jpg" alt="third slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </slide>
+  </carousel>
+  <br><br>
+  <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
+  [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
+</button>
+<hr>
+<div id="collapseBasic" [collapse]="isCollapsed">
+<div class="well well-lg card card-block card-header">Some content</div>
+</div>
